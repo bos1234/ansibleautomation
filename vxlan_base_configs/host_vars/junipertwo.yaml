@@ -1,0 +1,6 @@
+---
+ansible_host: 1.1.1.3
+if0: ge-0/0/0
+ip0: 11.22.11.22
+lo0: lo0
+loopback_address: 22.22.22.22

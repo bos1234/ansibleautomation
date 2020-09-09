@@ -1,0 +1,5 @@
+---
+- name: ospf settings
+  template:
+    src: ospf.j2
+    dest: "{{ config_assemble_build }}/ospf.conf"

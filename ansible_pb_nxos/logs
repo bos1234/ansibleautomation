@@ -1,0 +1,59 @@
+ansible-playbook 2.9.13
+  config file = /home/suren/ansibleautomation/ansible_pb_nxos/ansible.cfg
+  configured module search path = [u'/home/suren/.ansible/plugins/modules', u'/usr/share/ansible/plugins/modules']
+  ansible python module location = /usr/lib/python2.7/dist-packages/ansible
+  executable location = /usr/bin/ansible-playbook
+  python version = 2.7.17 (default, Jul 20 2020, 15:37:01) [GCC 7.5.0]
+Using /home/suren/ansibleautomation/ansible_pb_nxos/ansible.cfg as config file
+host_list declined parsing /home/suren/ansibleautomation/ansible_pb_nxos/inventory as it did not pass its verify_file() method
+script declined parsing /home/suren/ansibleautomation/ansible_pb_nxos/inventory as it did not pass its verify_file() method
+auto declined parsing /home/suren/ansibleautomation/ansible_pb_nxos/inventory as it did not pass its verify_file() method
+Parsed /home/suren/ansibleautomation/ansible_pb_nxos/inventory inventory source with ini plugin
+
+PLAYBOOK: showversion.yaml **********************************************************
+1 plays in showversion.yaml
+
+PLAY [cisco] ************************************************************************
+META: ran handlers
+
+TASK [run show version] *************************************************************
+task path: /home/suren/ansibleautomation/ansible_pb_nxos/showversion.yaml:6
+<1.1.1.2> ESTABLISH LOCAL CONNECTION FOR USER: suren
+<1.1.1.2> EXEC /bin/sh -c '( umask 77 && mkdir -p "` echo /home/suren/.ansible/tmp/ansible-local-14087KnE_8o `"&& mkdir "` echo /home/suren/.ansible/tmp/ansible-local-14087KnE_8o/ansible-tmp-1600001721.97-14094-63266553440799 `" && echo ansible-tmp-1600001721.97-14094-63266553440799="` echo /home/suren/.ansible/tmp/ansible-local-14087KnE_8o/ansible-tmp-1600001721.97-14094-63266553440799 `" ) && sleep 0'
+Using module file /usr/lib/python2.7/dist-packages/ansible/modules/network/nxos/nxos_command.py
+<1.1.1.2> PUT /home/suren/.ansible/tmp/ansible-local-14087KnE_8o/tmpEbvHJc TO /home/suren/.ansible/tmp/ansible-local-14087KnE_8o/ansible-tmp-1600001721.97-14094-63266553440799/AnsiballZ_nxos_command.py
+<1.1.1.2> EXEC /bin/sh -c 'chmod u+x /home/suren/.ansible/tmp/ansible-local-14087KnE_8o/ansible-tmp-1600001721.97-14094-63266553440799/ /home/suren/.ansible/tmp/ansible-local-14087KnE_8o/ansible-tmp-1600001721.97-14094-63266553440799/AnsiballZ_nxos_command.py && sleep 0'
+<1.1.1.2> EXEC /bin/sh -c '/usr/bin/python3.6 /home/suren/.ansible/tmp/ansible-local-14087KnE_8o/ansible-tmp-1600001721.97-14094-63266553440799/AnsiballZ_nxos_command.py && sleep 0'
+<1.1.1.2> EXEC /bin/sh -c 'rm -f -r /home/suren/.ansible/tmp/ansible-local-14087KnE_8o/ansible-tmp-1600001721.97-14094-63266553440799/ > /dev/null 2>&1 && sleep 0'
+The full traceback is:
+Traceback (most recent call last):
+  File "/home/suren/.ansible/tmp/ansible-local-14087KnE_8o/ansible-tmp-1600001721.97-14094-63266553440799/AnsiballZ_nxos_command.py", line 102, in <module>
+    _ansiballz_main()
+  File "/home/suren/.ansible/tmp/ansible-local-14087KnE_8o/ansible-tmp-1600001721.97-14094-63266553440799/AnsiballZ_nxos_command.py", line 94, in _ansiballz_main
+    invoke_module(zipped_mod, temp_path, ANSIBALLZ_PARAMS)
+  File "/home/suren/.ansible/tmp/ansible-local-14087KnE_8o/ansible-tmp-1600001721.97-14094-63266553440799/AnsiballZ_nxos_command.py", line 40, in invoke_module
+    runpy.run_module(mod_name='ansible.modules.network.nxos.nxos_command', init_globals=None, run_name='__main__', alter_sys=True)
+  File "/usr/lib/python3.6/runpy.py", line 205, in run_module
+    return _run_module_code(code, init_globals, run_name, mod_spec)
+  File "/usr/lib/python3.6/runpy.py", line 96, in _run_module_code
+    mod_name, mod_spec, pkg_name, script_name)
+  File "/usr/lib/python3.6/runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "/tmp/ansible_nxos_command_payload_t9vqxks0/ansible_nxos_command_payload.zip/ansible/modules/network/nxos/nxos_command.py", line 232, in <module>
+  File "/tmp/ansible_nxos_command_payload_t9vqxks0/ansible_nxos_command_payload.zip/ansible/modules/network/nxos/nxos_command.py", line 200, in main
+  File "/tmp/ansible_nxos_command_payload_t9vqxks0/ansible_nxos_command_payload.zip/ansible/module_utils/network/nxos/nxos.py", line 1222, in run_commands
+  File "/tmp/ansible_nxos_command_payload_t9vqxks0/ansible_nxos_command_payload.zip/ansible/module_utils/network/nxos/nxos.py", line 130, in get_connection
+  File "/tmp/ansible_nxos_command_payload_t9vqxks0/ansible_nxos_command_payload.zip/ansible/module_utils/connection.py", line 185, in __rpc__
+ansible.module_utils.connection.ConnectionError: timed out
+fatal: [spine1]: FAILED! => {
+    "changed": false, 
+    "module_stderr": "Traceback (most recent call last):\n  File \"/home/suren/.ansible/tmp/ansible-local-14087KnE_8o/ansible-tmp-1600001721.97-14094-63266553440799/AnsiballZ_nxos_command.py\", line 102, in <module>\n    _ansiballz_main()\n  File \"/home/suren/.ansible/tmp/ansible-local-14087KnE_8o/ansible-tmp-1600001721.97-14094-63266553440799/AnsiballZ_nxos_command.py\", line 94, in _ansiballz_main\n    invoke_module(zipped_mod, temp_path, ANSIBALLZ_PARAMS)\n  File \"/home/suren/.ansible/tmp/ansible-local-14087KnE_8o/ansible-tmp-1600001721.97-14094-63266553440799/AnsiballZ_nxos_command.py\", line 40, in invoke_module\n    runpy.run_module(mod_name='ansible.modules.network.nxos.nxos_command', init_globals=None, run_name='__main__', alter_sys=True)\n  File \"/usr/lib/python3.6/runpy.py\", line 205, in run_module\n    return _run_module_code(code, init_globals, run_name, mod_spec)\n  File \"/usr/lib/python3.6/runpy.py\", line 96, in _run_module_code\n    mod_name, mod_spec, pkg_name, script_name)\n  File \"/usr/lib/python3.6/runpy.py\", line 85, in _run_code\n    exec(code, run_globals)\n  File \"/tmp/ansible_nxos_command_payload_t9vqxks0/ansible_nxos_command_payload.zip/ansible/modules/network/nxos/nxos_command.py\", line 232, in <module>\n  File \"/tmp/ansible_nxos_command_payload_t9vqxks0/ansible_nxos_command_payload.zip/ansible/modules/network/nxos/nxos_command.py\", line 200, in main\n  File \"/tmp/ansible_nxos_command_payload_t9vqxks0/ansible_nxos_command_payload.zip/ansible/module_utils/network/nxos/nxos.py\", line 1222, in run_commands\n  File \"/tmp/ansible_nxos_command_payload_t9vqxks0/ansible_nxos_command_payload.zip/ansible/module_utils/network/nxos/nxos.py\", line 130, in get_connection\n  File \"/tmp/ansible_nxos_command_payload_t9vqxks0/ansible_nxos_command_payload.zip/ansible/module_utils/connection.py\", line 185, in __rpc__\nansible.module_utils.connection.ConnectionError: timed out\n", 
+    "module_stdout": "", 
+    "msg": "MODULE FAILURE\nSee stdout/stderr for the exact error", 
+    "rc": 1
+}
+
+PLAY RECAP **************************************************************************
+spine1                     : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+
+suren@ubuntu:~/ansibleautomation/ansible_pb_nxos$ 

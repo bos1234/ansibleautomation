@@ -1,1 +1,7 @@
-spine1
+[all:vars]
+ansible_connection=local
+ansible_user=admin
+ansible_ssh_pass=admin
+
+[spine]
+spine1  ansible_host=1.1.1.2

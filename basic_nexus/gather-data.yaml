@@ -1,0 +1,8 @@
+---
+ - name: sample playbook
+   hosts: all
+   connection: local
+   gather_facts: no
+
+   tasks:
+     - nxos_feature: feature=ospf state=disabled host={{ inventory_hostname }}

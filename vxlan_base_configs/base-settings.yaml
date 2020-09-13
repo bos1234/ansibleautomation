@@ -1,5 +1,5 @@
 ---
-- name: Generate and Install Configuration files
+- name: Configure base configuration
   hosts:
     - all
   roles:

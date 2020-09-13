@@ -1,16 +1,19 @@
 ---
 - name: nxos_facts module
   hosts: spine
+  
+  
+
   vars:
     ssh:
       host: "{{ ansible_host }}"
-      username: "{{ username }}"
-      password: "{{ password }}"
+      username: "admin"
+      password: "admin"
       transport: cli
     nxapi:
       host: "{{ ansible_host }}"
-      username: "{{ username }}"
-      password: "{{ password }}"
+      username: "admin"
+      password: "admin"
       transport: nxapi
       use_ssl: yes
       validate_certs: no

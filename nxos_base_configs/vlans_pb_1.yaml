@@ -19,9 +19,7 @@
         admin_state: "{{ item.admin_state  }}"
         name: "{{ item.name  }}"
       with_items: "{{ vlans }}"
-      notify: write mem
 
-  handlers:
     - name: write mem
       nxos_command:
         provider: "{{ provider_ssh }}"

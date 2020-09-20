@@ -1,0 +1,6 @@
+---
+provider_ssh:
+  host: "{{ ansible_host }}"
+  username: "{{ username }}"
+  username: "{{ password }}"
+  transport: cli

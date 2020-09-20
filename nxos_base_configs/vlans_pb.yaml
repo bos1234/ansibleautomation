@@ -1,6 +1,6 @@
 ---
 - name: configure VLANS
-  hosts: nxos
+  hosts: cisco
   vars:
     vlans:
       - vlan_id: 550

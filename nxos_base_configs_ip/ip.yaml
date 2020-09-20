@@ -1,0 +1,38 @@
+---
+- name: configure VLANS
+  hosts: cisco
+  vars:
+    vlans:
+      - vlan_id: 550
+        admin_state: up
+        name: BLACK
+      - vlan_id: 551
+        admin_state: up
+        name: ORANGE
+
+
+  tasks:
+    - name: Configure NEXUS VLANs
+      nxos_vlan:
+        provider: "{{ provider_ssh }}"
+        vlan_id: "{{ item.vlan_id  }}"
+        admin_state: "{{ item.admin_state  }}"
+        name: "{{ item.name  }}"
+      with_items: "{{ vlans }}"
+
+
+    - nxos_ip_interface: Configure NEXUS VLANs
+        provider: "{{ provider_ssh }}"
+        interface: Ethernet1/1
+        version: v4
+        addr: "{{ ip_addr }}"
+        mask: 24
+      notify: write mem
+
+  handlers:
+    - name: write mem
+      nxos_command:
+        provider: "{{ provider_ssh }}"
+        commands: copy run start
+      changed_when: True
+      tags: wr_mem

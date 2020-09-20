@@ -20,3 +20,8 @@
         name: "{{ item.name  }}"
       with_items: "{{ vlans }}"
 
+    - name: write mem
+      nxos_command:
+        provider: "{{ provider_ssh }}"
+        commands: copy run start
+      tag: wr_mem

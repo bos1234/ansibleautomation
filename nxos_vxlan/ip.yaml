@@ -1,0 +1,23 @@
+---
+- name: configure VLANS
+  hosts: cisco
+
+  tasks:
+
+    - nxos_config:
+        provider: "{{ provider_ssh }}"
+        lines:
+          - "no switchport"
+          - "ip address {{ ip_addr }}"
+          - "no shutdown"
+        parents: interface ethernet1/1
+        match: strict
+      notify: write mem
+
+  handlers:
+    - name: write mem
+      nxos_command:
+        provider: "{{ provider_ssh }}"
+        commands: copy run start
+      changed_when: True
+      tags: wr_mem

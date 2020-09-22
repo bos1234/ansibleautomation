@@ -1,9 +1,9 @@
 ---
 loopback:
-  ip: 22.22.22.22
+  ip: 33.33.33.33
 SPINE:
   interface: 'Ethernet1/1'
-  ip: 11.22.11.22
+  ip: 11.33.11.33
   subnet: 255.255.255.0
 SERVERS:
   interface: 'GigabitEthernet0/2'

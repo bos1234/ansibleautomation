@@ -1,6 +1,6 @@
 ---
 - name: Push NX-OS configs
-  hosts: nxos
+  hosts: cisco
   tasks:
     - nxos_config:
         provider: "{{ provider_ssh }}"

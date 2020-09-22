@@ -1,0 +1,7 @@
+---
+- name: Push NX-OS configs
+  hosts: nxos
+  tasks:
+    - nxos_config:
+        provider: "{{ ssh }}"
+        src: "./configs/{{ inventory_hostname }}.conf"

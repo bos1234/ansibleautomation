@@ -17,3 +17,12 @@
   connection: local
   roles:
     - base
+
+- name: Assemble configurations
+  hosts: all
+  connection: local
+  tasks:
+  - assemble:
+      src: "{{build_dir}}/{{inventory_hostname}}"
+      dest: "{{config_dir}}/{{inventory_hostname}}.conf"
+    check_mode: no

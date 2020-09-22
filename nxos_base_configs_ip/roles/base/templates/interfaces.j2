@@ -2,7 +2,6 @@
 interface Loopback0
  ip address {{loopback.ip}} 255.255.255.255
 {% endif %}
-!
 {% if SPINE is defined %}
 interface {{SPINE.interface}}
  description SPINE interface
@@ -16,9 +15,6 @@ interface {{SERVERS.interface}}
  ip address {{SERVERS.ip}} {{SERVERS.subnet}}
 !
 {% endif %}
-!
-! Spine configs
-!
 {% if LEAF is defined %}
 interface {{LEAF.0.interface}}
  description LEAF interface

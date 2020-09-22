@@ -8,6 +8,6 @@ LEAF:
     ip: 11.22.11.11
     subnet: 255.255.255.0
   1:
-    interface: 'Ethernet1/1'
+    interface: 'Ethernet1/2'
     ip: 11.33.11.11
     subnet: 255.255.255.0

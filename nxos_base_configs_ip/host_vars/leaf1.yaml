@@ -6,6 +6,6 @@ SPINE:
   ip: 11.22.11.22
   subnet: 255.255.255.0
 SERVERS:
-  interface: 'GigabitEthernet0/2'
-  ip: 10.0.7.22
+  interface: 'Ethernet1/3'
+  ip: 22.22.22.1 
   subnet: 255.255.255.0

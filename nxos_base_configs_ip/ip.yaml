@@ -11,3 +11,9 @@
     args:
       warn: false
     changed_when: false
+
+- name: Generate configs
+  hosts: all
+  connection: local
+  roles:
+    - base

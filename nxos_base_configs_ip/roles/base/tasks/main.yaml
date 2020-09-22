@@ -1,0 +1,5 @@
+---
+- name: Baseline configuration - IP interfaces
+  template: src=interfaces.j2 dest={{ build_dir }}/{{inventory_hostname}}/interfaces.conf
+  check_mode: no
+  changed_when: false

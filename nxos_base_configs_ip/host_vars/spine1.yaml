@@ -1,6 +1,7 @@
 ---
 loopback:
   ip: 11.11.11.11
+  subnet: 255.255.255.0
 LEAF:
   0:
     interface: 'Ethernet1/1'

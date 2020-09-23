@@ -17,6 +17,7 @@
   connection: local
   roles:
     - base
+    - ospf
 
 - name: Assemble configurations
   hosts: all

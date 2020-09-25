@@ -16,9 +16,10 @@
   hosts: all
   connection: local
   roles:
-    - base
-    - ospf
-    - mcast
+    #    - base
+    #    - ospf
+    #    - mcast
+    - bgp
 
 - name: Assemble configurations
   hosts: all

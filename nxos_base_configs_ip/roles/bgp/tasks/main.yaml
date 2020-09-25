@@ -1,0 +1,5 @@
+---
+- name: Baseline configuration - ospf
+  template: src=bgp-config.j2 dest={{ build_dir }}/{{inventory_hostname}}/bgp.conf
+  check_mode: no
+  changed_when: false

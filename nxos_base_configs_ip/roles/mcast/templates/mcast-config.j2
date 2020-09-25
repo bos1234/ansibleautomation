@@ -1,0 +1,23 @@
+feature pim
+!
+ip pim rp-address 1.2.3.4 group-list 224.0.0.0/4
+ip pim ssm range 232.0.0.0/8
+interface loopback0
+ ip pim sparse-mode
+
+
+{% if SPINE is defined %}
+ interface {{SPINE.interface}}
+   ip pim sparse-mode
+{% endif %}
+
+{% if LEAF is defined %}
+ interface {{LEAF.0.interface}}
+   ip pim sparse-mode
+!
+ interface {{LEAF.1.interface}}
+   ip pim sparse-mode
+!
+ interface loopback1
+   ip pim sparse-mode
+{% endif %}

@@ -1,0 +1,26 @@
+feature ospf
+router ospf UNDERLAY_NET
+ router-id {{ loopback.ip }}
+!
+interface Loopback0
+ ip router ospf UNDERLAY_NET area 0
+!
+
+{% if SPINE is defined %}
+ interface {{SPINE.interface}}
+  ip router ospf UNDERLAY_NET area 0
+  medium p2p
+{% endif %}
+
+{% if LEAF is defined %}
+ interface {{LEAF.0.interface}}
+  ip router ospf UNDERLAY_NET area 0
+  medium p2p
+!
+ interface {{LEAF.1.interface}}
+  ip router ospf UNDERLAY_NET area 0
+  medium p2p
+!
+ interface loopback1
+  ip router ospf UNDERLAY_NET area 0
+{% endif %}

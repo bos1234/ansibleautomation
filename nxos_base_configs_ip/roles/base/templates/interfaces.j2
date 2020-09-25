@@ -31,4 +31,8 @@ interface {{LEAF.1.interface}}
  no switchport
  ip address {{LEAF.1.ip}} {{LEAF.1.subnet}}
  no shut
+!
+interface loopback1
+ description RP
+ ip address 1.2.3.4 255.255.255.255
 {% endif %}

@@ -7,5 +7,5 @@ SPINE:
   subnet: 255.255.255.0
 SERVERS:
   interface: 'Ethernet1/3'
-  ip: 33.33.33.1
+  ip: 100.100.100.1
   subnet: 255.255.255.0

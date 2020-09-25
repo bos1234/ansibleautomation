@@ -3,8 +3,3 @@
   template: src=interfaces.j2 dest={{ build_dir }}/{{inventory_hostname}}/interfaces.conf
   check_mode: no
   changed_when: false
-
-- name: Baseline configuration - ospf
-  template: src=ospf-config.j2 dest={{ build_dir }}/{{inventory_hostname}}/ospf.conf
-  check_mode: no
-  changed_when: false
